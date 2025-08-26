@@ -58,10 +58,9 @@
     document.getElementById('submitBtn').addEventListener('click', () => {
       const val = (document.getElementById('nameInput').value || '').trim().toLowerCase();
       if(val === 'ria'){
-        // send to next page (your birthday escape game)
-        window.location.href = 'escape.html'; // change to your real next page file
+        // go to home.html
+        window.location.href = 'home.html';
       } else {
-        // redirect to Northern Flights site
         window.location.href = 'https://northernflightsdiscgolf.ca';
       }
     });
