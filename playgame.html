@@ -80,7 +80,7 @@
     <!-- ROOM 1: Code Lock (3-digit) -->
     <section id="room1" class="card" aria-live="polite">
       <h2>Room 1 · The Code Lock</h2>
-      <p class="muted">Enter the 3‑digit code to unlock the door. <span class="hint">(Tip: It could be a special date!)</span></p>
+      <p class="muted">Enter the 3‑digit code to unlock the door. <span class="hint">(Tip: It could be a code)</span></p>
       <div class="row" style="align-items:center;margin-top:10px">
         <div class="pin" aria-label="3 digit pin">
           <input inputmode="numeric" maxlength="1" aria-label="Digit 1" />
@@ -96,7 +96,7 @@
     <!-- ROOM 2: Riddle -->
     <section id="room2" class="card" hidden>
       <h2>Room 2 · Whisper Riddle</h2>
-      <p class="muted">I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?</p>
+      <p class="muted">A dishonest fish</p>
       <div class="row" style="align-items:center;margin-top:10px">
         <input id="riddleInput" type="text" placeholder="Type your answer" aria-label="Riddle answer" />
         <button id="checkRiddle" class="btn">Submit</button>
@@ -120,17 +120,29 @@
       <div class="hint" style="margin-top:6px">You can replace the photo URL in the code with your own image.</div>
     </section>
 
-    <!-- FINALE -->
-    <section id="finale" class="card" hidden>
-      <h2>Finale · Happy 40th! 🎉</h2>
-      <p>Surprise unlocked! 
-        <span class="muted">(Put your message here — e.g., a dinner reveal, trip itinerary, or embedded video.)</span>
-      </p>
-      <div class="divider"></div>
-      <button id="restart" class="btn ghost">Replay from start</button>
-    </section>
 
-    <div class="footer-note">Tip: All logic is in one HTML file. Change the PIN, riddle, or image by editing the variables at the top of the script.</div>
+  <!-- FINALE -->
+  <section id="finale" class="card" hidden>
+    <h2>Finale · Happy 40th! 🎉</h2>
+    <p>Surprise unlocked! <span class="muted">Press play ↓</span></p>
+
+    <!-- Responsive YouTube embed -->
+    <div style="position:relative;padding-bottom:56.25%;height:0;border-radius:12px;overflow:hidden;border:1px solid #ffffff22;margin:12px 0 8px;">
+      <iframe
+        src="https://www.youtube.com/embed/3dwvOYDB3PI?rel=0&modestbranding=1&playsinline=1"
+        title="Finale Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        style="position:absolute;inset:0;width:100%;height:100%;border:0;">
+      </iframe>
+    </div>
+
+    <div class="divider"></div>
+    <button id="restart" class="btn ghost">Replay from start</button>
+  </section>
+
+
+    <div class="footer-note"></div>
   </div>
 
   <script>
